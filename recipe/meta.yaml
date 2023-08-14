@@ -1,5 +1,5 @@
 {% set name = "weasel" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6471428ba21064dcdecdd769ce5033034bcd97fbdcf35fa05a32a9dec7cff1ca
+  sha256: 6106e942795130167d816aa6d61c818d7cad148a61d6b082b790b804517554fe
 
 build:
   noarch: python
@@ -22,7 +22,6 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - setuptools
     - confection >=0.0.4,<0.2.0
     - packaging >=20.0
     - wasabi >=0.9.1,<1.2.0
@@ -39,7 +38,6 @@ test:
     - {{ name }}
   requires:
     - pytest
-    - git
     - pip
     - requests
   commands:
