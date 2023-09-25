@@ -1,5 +1,5 @@
 {% set name = "weasel" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6106e942795130167d816aa6d61c818d7cad148a61d6b082b790b804517554fe
+  sha256: 803f0594e5ca0190ba4a1b6b88bf655c8576e40454d3ff1069ba16e2b1828c0c
 
 build:
   noarch: python
