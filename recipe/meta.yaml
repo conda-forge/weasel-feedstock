@@ -1,5 +1,5 @@
 {% set name = "weasel" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 803f0594e5ca0190ba4a1b6b88bf655c8576e40454d3ff1069ba16e2b1828c0c
+  sha256: 96c244ec5ada220f6a1d0af082edf97ef77c11e8eb1d2fbdcd895ad4d102ce19
 
 build:
   noarch: python
@@ -27,7 +27,7 @@ requirements:
     - wasabi >=0.9.1,<1.2.0
     - srsly >=2.4.3,<3.0.0
     - catalogue >=2.0.6,<2.1.0
-    - typer >=0.3.0,<0.8.0
+    - typer >=0.3.0,<0.10.0
     - cloudpathlib >=0.7.0,<0.16.0
     - smart-open >=5.2.1,<7.0.0
     - requests >=2.13.0,<3.0.0
