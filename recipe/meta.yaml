@@ -38,6 +38,7 @@ test:
   requires:
     - pytest >=5.2.0,!=7.1.0,<8.0.0
     - pip
+    - git
     - requests
   commands:
     - pip check
