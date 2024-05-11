@@ -18,10 +18,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.8
     - pip
   run:
-    - python >=3.6
+    - python >=3.8
     - confection >=0.0.4,<0.2.0
     - packaging >=20.0
     - wasabi >=0.9.1,<1.2.0
@@ -36,7 +36,7 @@ test:
   imports:
     - {{ name }}
   requires:
-    - pytest
+    - pytest >=5.2.0,!=7.1.0,<8.0.0
     - pip
     - requests
   commands:
