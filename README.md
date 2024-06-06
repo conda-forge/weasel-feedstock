@@ -155,4 +155,5 @@ Feedstock Maintainers
 * [@adrianeboyd](https://github.com/adrianeboyd/)
 * [@honnibal](https://github.com/honnibal/)
 * [@ines](https://github.com/ines/)
+* [@rxm7706](https://github.com/rxm7706/)
 
