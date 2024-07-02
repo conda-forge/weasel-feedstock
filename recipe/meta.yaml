@@ -14,14 +14,14 @@ build:
     - weasel = weasel.cli:app
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.7
     - pip
   run:
-    - python >=3.8
+    - python >=3.7
     - confection >=0.0.4,<0.2.0
     - packaging >=20.0
     - wasabi >=0.9.1,<1.2.0
