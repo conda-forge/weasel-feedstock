@@ -152,8 +152,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@adrianeboyd](https://github.com/adrianeboyd/)
-* [@honnibal](https://github.com/honnibal/)
-* [@ines](https://github.com/ines/)
+* [@conda-forge/spacy](https://github.com/orgs/conda-forge/teams/spacy/)
 * [@rxm7706](https://github.com/rxm7706/)
 
