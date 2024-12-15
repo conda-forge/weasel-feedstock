@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: aabc210f072e13f6744e5c3a28037f93702433405cd35673f7c6279147085aa9
 
 build:
@@ -14,14 +14,14 @@ build:
     - weasel = weasel.cli:app
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - confection >=0.0.4,<0.2.0
     - packaging >=20.0
     - wasabi >=0.9.1,<1.2.0
@@ -40,6 +40,7 @@ test:
     - pip
     - git
     - requests
+    - python {{ python_min }}
   commands:
     - pip check
     - weasel --help
