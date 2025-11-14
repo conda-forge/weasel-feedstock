@@ -1,5 +1,5 @@
 {% set name = "weasel" %}
-{% set version = "0.4.2" %}
+{% set version = "0.4.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 447a5f7b99f8002c4c5ed076ecf75f23e9ad3f7c4be05d3930c7d087721674fd
+  sha256: f293d6174398e8f478c78481e00c503ee4b82ea7a3e6d0d6a01e46a6b1396845
 
 build:
   entry_points:
