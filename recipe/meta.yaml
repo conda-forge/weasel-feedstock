@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/weasel-{{ version }}.tar.gz
   sha256: 7b129b44c90cc543b760532974ca1e4eb30dad2aa2026f57bdce66354ae610fc
 
 build:
@@ -19,11 +19,10 @@ build:
 requirements:
   host:
     - python {{ python_min }}
+    - setuptools
     - pip
   run:
-    - httpx >=0.24.0
-    - typer-slim >=0.3.0,<1.0.0
-    - python >={{ python_min }}
+    - python >={{ python_min }},<4.0
     - confection >=1.0.0
     - packaging >=20.0
     - wasabi >=0.9.1
@@ -31,23 +30,21 @@ requirements:
     - typer >=0.3.0
     - cloudpathlib >=0.7.0
     - smart-open >=5.2.1
-    - requests >=2.13.0,<3.0.0
+    - requests
+    - httpx >=0.24.0
     - pydantic >=2.0.0
 
 test:
   imports:
-    - {{ name }}
-  requires:
-    - pytest >=5.2.0,!=7.1.0
-    - pip
-    - git
-    - requests
-    - python {{ python_min }}
+    - weasel
   commands:
     - pip check
     - weasel --help
     - python -m pytest --tb=native --pyargs {{ name }}
-
+  requires:
+    - pip
+    - python {{ python_min }}
+    - pytest>=5.2.0,!=7.1.0
 
 about:
   home: https://github.com/explosion/weasel
@@ -64,5 +61,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - rxm7706
     - conda-forge/spacy
+    - rxm7706
