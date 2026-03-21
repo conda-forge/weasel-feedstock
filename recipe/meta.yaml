@@ -44,7 +44,7 @@ test:
   requires:
     - pip
     - python {{ python_min }}
-    - pytest>=5.2.0,!=7.1.0
+    - pytest >=5.2.0,!=7.1.0
 
 about:
   home: https://github.com/explosion/weasel
