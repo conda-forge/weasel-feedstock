@@ -7,6 +7,8 @@ package:
 source:
   url: https://pypi.org/packages/source/w/weasel/weasel-{{ version }}.tar.gz
   sha256: 7b129b44c90cc543b760532974ca1e4eb30dad2aa2026f57bdce66354ae610fc
+  patches:
+    - patches/0001-loosen-expected-error-in-test_project_config_interpo.patch
 
 build:
   entry_points:
